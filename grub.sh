@@ -35,7 +35,11 @@ sudo tar -C /usr/share/grub/themes/$THEME -xf $THEME.tar
 
 sudo cp /etc/default/grub /etc/default/grub.baks
 
-sudo sed -i "s|^GRUB_THEME=.*|GRUB_THEME=\"/usr/share/grub/themes/$THEME/theme.txt\"|" /etc/default/grub
+if grep -q "^GRUB_THEME=" /etc/default/grub; then
+    sudo sed -i "s|^GRUB_THEME=.*|GRUB_THEME=\"/usr/share/grub/themes/$THEME/theme.txt\"|" /etc/default/grub
+else
+    echo "GRUB_THEME=\"/usr/share/grub/themes/$THEME/theme.txt\"" | sudo tee -a /etc/default/grub > /dev/null
+fi
 
 echo " "
 echo "----------------------------------"
