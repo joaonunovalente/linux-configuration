@@ -12,6 +12,12 @@ APPS=(
     com.yubico.yubioath
     org.chromium.Chromium
     com.google.Chrome
+    org.onlyoffice.desktopeditors
+    it.mijorus.gearlever
+    com.github.jeromerobert.pdfarranger
+    com.github.tchx84.Flatseal
+    org.fedoraproject.MediaWriter
+    com.stremio.Stremio
 )
 
 for APP in "${APPS[@]}"
