@@ -2,7 +2,7 @@
 
 echo "Atualizando sistema..."
 sudo apt update
-sudo apt install -y flatpak git pcscd curl nano
+sudo apt install -y flatpak git pcscd curl nano steam-devices
 
 echo "Adicionando Flathub (sistema)..."
 sudo flatpak remote-add --if-not-exists flathub \
