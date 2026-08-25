@@ -33,4 +33,7 @@ sudo flatpak install -y flathub "${APPS[@]}"
 echo "Ativando serviço PC/SC..."
 sudo systemctl enable --now pcscd
 
+echo "Instalando Steam Devices rules..."
+sudo apt install steam steam-devices
+
 echo "Instalação concluída!"
